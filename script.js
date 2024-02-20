@@ -21,11 +21,6 @@ add_btn.addEventListener("click",() =>{
     }
 })
 
-
-
-
-
-
 rmv_btn.addEventListener("click", () => {
     const selecionados = [...document.querySelectorAll(".selecionado")];
     selecionados.map((e) => {
