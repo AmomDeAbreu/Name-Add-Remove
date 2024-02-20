@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    color: rgb(224, 224, 224);
+    font-family: sans-serif;
+}
+.nome{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid rgb(154, 0, 214);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 18px 13px 13px 10px;
+    cursor: pointer;
+}
+
+
+
+
+.nome:hover, .selecionado{
+    border-color: rgb(106, 255, 106);
+}
+
+
+.priority{
+    color: rgb(255, 255, 255) !important;
+    background-color:rgb(39, 41, 40) !important;
+    border-color: rgb(0, 217, 255) !important;
+}
+
+.outside{
+    justify-content: center;
+    width: 250px;
+    height: 500px;
+    border: 4px solid rgb(141, 141, 141);
+    margin: 10% 10px 10px 20%;
+    padding: 50px;
+    background-color: rgb(15, 15, 15);
+    border-radius: 10px;
+}
+
+#copia{
+    margin-left: 100px;
+}
+
+.botao{
+    justify-content: center;
+    display: flex;
+    margin: 5% auto 0 auto;
+    border-radius: 10px;
+    border: 4px solid rgb(141, 141, 141);
+    width: 40%;
+    padding: 3%;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.botao:hover{
+    border-color: rgb(106, 255, 106);
+}
+
+#titulo{
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: auto;
+}
+
+input#texto{
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin: 8% auto 0 auto;
+    padding: 0 10% 0 10%;
+}
