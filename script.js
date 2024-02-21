@@ -17,6 +17,9 @@ add_btn.addEventListener("click",() =>{
         const novo_nome = document.createElement("div");
         novo_nome.setAttribute("class", "nome")
         novo_nome.innerHTML = txt_input.value;
+        novo_nome.addEventListener("click", () => {
+            novo_nome.classList.toggle("selecionado");
+        })
         other_div.appendChild(novo_nome);
     }
 })
