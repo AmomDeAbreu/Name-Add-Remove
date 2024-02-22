@@ -19,9 +19,11 @@ nomes.map((el) => {
     })
 })
 
+let qtdVezes = 0;
+
 // Adiciona nomes e permite que ao clicar nos nomes adicionados eles recebam a classe de selecionado;
 add_btn.addEventListener("click",() =>{
-    if(txt_input.value != ""){
+    if(txt_input.value != "" && qtdVezes <= 3){
         /** instância de nova div com nome digitado */
         const novo_nome = document.createElement("div");
         novo_nome.setAttribute("class", "nome")
@@ -32,6 +34,7 @@ add_btn.addEventListener("click",() =>{
 
         other_div.appendChild(novo_nome);
     }
+    qtdVezes++;
 })
 
 
@@ -43,19 +46,23 @@ rmv_btn.addEventListener("click", () => {
     })
 })
 
+let qtdVezes2 = 0;
 // Mostra
 btn_slt.addEventListener("click", () => {
-    const todos_nomes_plmds = [...document.querySelectorAll(".nome")];
-    let todos_selecionados = todos_nomes_plmds.filter((val) => {
-        if(val.classList.contains("selecionado"))
-            return val;
-    })
-    todos_selecionados.map((el) =>{
-        const p = document.createElement("p");
-            p.innerHTML = el.innerHTML;
-            p.setAttribute("class", "contem");
-            div_matrix.appendChild(p);
-    })
+    if(qtdVezes2 <= 5){
+        const todos_nomes_plmds = [...document.querySelectorAll(".nome")];
+        let todos_selecionados = todos_nomes_plmds.filter((val) => {
+            if(val.classList.contains("selecionado"))
+                return val;
+        })
+        todos_selecionados.map((el) =>{
+            const p = document.createElement("p");
+                p.innerHTML = el.innerHTML;
+                p.setAttribute("class", "contem");
+                div_matrix.appendChild(p);
+        })
+    }
+    qtdVezes2++;
 })
 
 
