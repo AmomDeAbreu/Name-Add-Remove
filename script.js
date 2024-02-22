@@ -50,6 +50,12 @@ btn_slt.addEventListener("click", () => {
         if(val.classList.contains("selecionado"))
             return val;
     })
+    todos_selecionados.map((el) =>{
+        const p = document.createElement("p");
+            p.innerHTML = el.innerHTML;
+            p.setAttribute("class", "contem");
+            div_matrix.appendChild(p);
+    })
 })
 
 

@@ -76,3 +76,9 @@ input#texto{
     margin: 8% auto 0 auto;
     padding: 0 10% 0 10%;
 }
+
+p{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
