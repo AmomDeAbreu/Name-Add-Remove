@@ -23,18 +23,17 @@ let qtdVezes = 0;
 
 // Adiciona nomes e permite que ao clicar nos nomes adicionados eles recebam a classe de selecionado;
 add_btn.addEventListener("click",() =>{
-    if(txt_input.value != "" && qtdVezes <= 3){
+    if(txt_input.value != "" && other_div.children.length <= 7 && txt_input.value.length < 19){
         /** instância de nova div com nome digitado */
         const novo_nome = document.createElement("div");
         novo_nome.setAttribute("class", "nome")
-        novo_nome.innerHTML = txt_input.value;
+        novo_nome.innerText = txt_input.value;
         novo_nome.addEventListener("click", () => {
             novo_nome.classList.toggle("selecionado");
         })
 
         other_div.appendChild(novo_nome);
     }
-    qtdVezes++;
 })
 
 
@@ -47,7 +46,8 @@ rmv_btn.addEventListener("click", () => {
 })
 
 let qtdVezes2 = 0;
-// Mostra
+
+// Mostra em um innertext o curso que foi seleciondo
 btn_slt.addEventListener("click", () => {
     if(qtdVezes2 <= 5){
         const todos_nomes_plmds = [...document.querySelectorAll(".nome")];
@@ -57,7 +57,7 @@ btn_slt.addEventListener("click", () => {
         })
         todos_selecionados.map((el) =>{
             const p = document.createElement("p");
-                p.innerHTML = el.innerHTML;
+                p.innerText = el.innerText;
                 p.setAttribute("class", "contem");
                 div_matrix.appendChild(p);
         })
