@@ -19,7 +19,6 @@ nomes.map((el) => {
     })
 })
 
-let qtdVezes = 0;
 
 // Adiciona nomes e permite que ao clicar nos nomes adicionados eles recebam a classe de selecionado;
 add_btn.addEventListener("click",() =>{
@@ -45,11 +44,10 @@ rmv_btn.addEventListener("click", () => {
     })
 })
 
-let qtdVezes2 = 0;
 
 // Mostra em um innertext o curso que foi seleciondo
 btn_slt.addEventListener("click", () => {
-    if(qtdVezes2 <= 5){
+    if(div_matrix.children.length < 12){
         const todos_nomes_plmds = [...document.querySelectorAll(".nome")];
         let todos_selecionados = todos_nomes_plmds.filter((val) => {
             if(val.classList.contains("selecionado"))
@@ -62,7 +60,6 @@ btn_slt.addEventListener("click", () => {
                 div_matrix.appendChild(p);
         })
     }
-    qtdVezes2++;
 })
 
 
