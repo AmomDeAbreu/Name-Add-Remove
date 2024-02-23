@@ -48,7 +48,7 @@ add_btn.addEventListener("click",() =>{
                 is_selected = true;
             }
         })
-        if(is_selected == false){
+        if(!is_selected){
             other_div.appendChild(novo_nome);
         } else {
             nomes.map((el) => {
