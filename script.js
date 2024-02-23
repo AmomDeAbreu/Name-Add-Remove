@@ -48,10 +48,11 @@ add_btn.addEventListener("click",() =>{
         nomes.map((el) => {
             if(el.classList.contains("selecionado")){
                 is_selected = true;
-            } else {
-                is_selected = false;
             }
         })
+
+        console.log(is_selected)
+
         if(!is_selected){
             other_div.appendChild(novo_nome);
         } else {
@@ -62,6 +63,7 @@ add_btn.addEventListener("click",() =>{
                 }
             })
         }
+
     } 
 })
 
@@ -72,8 +74,11 @@ rmv_btn.addEventListener("click", () => {
     /** Variável local para pegar valores selecionados */
     const selecionados = [...document.querySelectorAll(".selecionado")];
     selecionados.map((e) => {
+        e.removeAttribute("class","selecionado");
         other_div.removeChild(e);
     })
+
+    is_selected = false;
 })
 
 
