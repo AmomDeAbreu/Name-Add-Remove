@@ -30,6 +30,8 @@ add_btn.addEventListener("click",() =>{
     nomes.map((el) => {
         if(el.classList.contains("selecionado")){
             is_selected = true;
+        } else {
+            is_selected = false;
         }
     })
 
@@ -46,6 +48,8 @@ add_btn.addEventListener("click",() =>{
         nomes.map((el) => {
             if(el.classList.contains("selecionado")){
                 is_selected = true;
+            } else {
+                is_selected = false;
             }
         })
         if(!is_selected){
